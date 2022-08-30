@@ -1,3 +1,5 @@
+//Keys geed uildel maani object dotorh key vvdiig neg array d hiij ogno.
+
 const person = {
   name: "jawhaa",
   age: 16,

@@ -1,3 +1,5 @@
+//values geed vildel ni object dotorh 1 key iin utga iig 1 arrayd hiij ogno key vvdiin avahguigeer objectiin bvh value-g 1 arrayd hiij ogno.
+
 const person = {
     name: "jawhaa",
     age: 16,
@@ -9,5 +11,6 @@ const person = {
     framework: ["bootstrap", "mui"],
   };
   const data = Object.values(skills);
-  console.log(data);
+  const value = data[2][1]
+  console.log(value);
   

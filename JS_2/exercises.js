@@ -66,47 +66,47 @@ const users = {
     points: 40,
   },
 };
+
 const data = Object.keys(users);
+let skill;
 let maxskills = 0;
-let j;
-let who;
-
-for(i=0;i<data.length;i++){
-  j = ((users[data[i]].skills.length));
-  if(maxskills < j){
-    who = data[i];
-    maxskills = j;
-  }
-}
-console.log(who , maxskills);
-
-for(i=0;i<data.length;i++){
-  j = ((users[data[i]].points));
-  if(j === 50 && users[data[i]].isLoggedIn == true){
-    console.log(data[i]); ;
-  }
-}
 
 for (i = 0; i < data.length; i++) {
-    if (users[data[i]].skills.includes("MongoDB", "Express", "React", "Node")) {
-     console.log(data[i]);
-    }
+  skill = users[data[i]].skills.length;
+  if (maxskills < skill) {
+    who = data[i];
+    maxskills = skill;
+  }
+}
+console.log(who, maxskills);
+
+for (let i = 0; i < data.length; i++) {
+  if(users[data[i]].isLoggedIn === true && users[data[i]].points === 50){
+    console.log(data[i]);
+  }
+}
+
+for (let i = 0; i < data.length; i++) {
+    const filtered = users[data[i]].skills.filter((a)=> a === "MongoDB" || a=== "Express" || a=== "React" || a=== "Node");
+    filtered.length === 4 ? console.log(data[i]):i+=0;
 }
 
 const Jawkhlan = {
-  Jawkhlan: {
-    email: "jawkhlan626@gmail.com",
-    skills: "HTML,CSS,HalfHalfHalfBootstrap,TailwindCSS",
-    age: 17,
+    Jawkhlan:{
+        email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
     isLoggedIn: false,
     points: 40,
-  },
-};
-const users1 = Object.assign(users, Jawkhlan);
-console.log(users1);
-
-let Keys = Object.keys(users1);
-console.log(Keys);
-
-let Values = Object.values(users1);
-console.log(Values);
+    }
+}
+const a = Object.assign(Jawkhlan,users);
+console.log(a);
