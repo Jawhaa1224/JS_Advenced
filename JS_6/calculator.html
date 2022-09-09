@@ -9,129 +9,148 @@
   </head>
   <body>
     <div
-      class="grid grid-rows-6 bg-gray-600 grid-cols-4 gap-8 border-4 border-b-400 p-4 rounded w-96 justife-around"
+      class="grid grid-rows-6 bg-black grid-cols-4 gap-8 border-4 border-b-400 p-4 rounded w-96 justife-around ml-96 mt-40 py-8"
     >
-      <div
-        class="px-6 py-2 underline col-span-4 rounded-2xl bg-white flex"
-        id="calculator"
-      >
-        <div class="w-4/6"></div>
-        <div class="w-2/6 bg-black"></div>
+      <div class="px-6 py-2 col-span-4 rounded-2xl">
+        <div
+          class="text-end no-underline text-5xl text-white"
+          id="calculator"
+        ></div>
       </div>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-400 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="AC"
+        onclick="AC()"
       >
         AC
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-400 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="nemeh_hasah"
+        onclick="nemehHasah()"
       >
         +/-
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-400 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="huvi"
+        onclick="vildel(`%`)"
       >
         %
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-orange-600 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="huvaah"
+        onclick="vildel(`/`)"
       >
         ÷
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-200 font-semibold p-4 w-16 h-16"
+        id="doloo"
+        onclick="tooBichih(7)"
       >
         7
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-200 font-semibold p-4 w-16 h-16"
+        id="naim"
+        onclick="tooBichih(8)"
       >
         8
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-200 font-semibold p-4 w-16 h-16"
+        id="yeos"
+        onclick="tooBichih(9)"
       >
         9
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-orange-600 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="vrjvvleh"
+        onclick="vildel(`*`)"
       >
         X
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="dorow"
+        onclick="tooBichih(4)"
       >
         4
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="tav"
+        onclick="tooBichih(5)"
       >
         5
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="zurgaa"
+        onclick="tooBichih(6)"
       >
         6
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-orange-600 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="hasah"
+        onclick="vildel(`-`)"
       >
         -
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="neg"
+        onclick="tooBichih(1)"
       >
         1
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="hoyor"
+        onclick="tooBichih(2)"
       >
         2
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="guraw"
+        onclick="tooBichih(3)"
       >
         3
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-orange-600 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="nemeh"
+        onclick="vildel('+')"
       >
         +
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 col-span-2 border rounded-full border-200 text-gray-300 font-semibold p-4 w-40 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 col-span-2 rounded-full border-200 text-gray-300 font-semibold p-4 w-40 h-16"
+        id="teg"
+        onclick="tooBichih(0)"
       >
         0
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-gray-700 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="tseg"
+        onclick="tseg()"
       >
         .
       </button>
       <button
-        class="flex justify-center items-center shadow-xl shadow-gray-300 border rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
-        style="border-style: outset; border: 5px solid grays"
+        class="flex justify-center items-center text-2xl bg-orange-600 rounded-full border-200 text-gray-300 font-semibold p-4 w-16 h-16"
+        id="tentsvv"
+        onclick="tentsvv()"
       >
         =
       </button>
     </div>
+    <script src="calculator.js"></script>
   </body>
 </html>
