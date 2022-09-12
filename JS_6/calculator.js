@@ -40,7 +40,7 @@ const vildel = (operator) => {
   }
 };
 const nemehHasah = () => {
-  niittoo.innerHTML = number(niittoo.innerHTML) * "-1";
+  niittoo.innerHTML = Number(niittoo.innerHTML) * "-1";
   if (niittoo.innerHTML.length > 16) {
     niittoo.style.fontSize = "24px";
   } else if (niittoo.innerHTML.length > 12) {
@@ -51,7 +51,7 @@ const nemehHasah = () => {
 };
 const tentsvv = () => {
   if (hi === "-") {
-    niittoo.innerHTML = Number(niittoo.innerHTML) - Number(hadaglah);
+    niittoo.innerHTML = Number(hadaglah) - Number(niittoo.innerHTML);
   } else if (hi === "+") {
     niittoo.innerHTML = Number(niittoo.innerHTML) + Number(hadaglah);
   } else if (hi === "*") {
@@ -85,27 +85,44 @@ document.addEventListener("keydown", (event) => {
   }
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "-" ) vildel();
+  if (event.key === "-") {
+    vildel();
+    hi = "-";
+  }
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "+") vildel();
+  if (event.key === "+") {
+    vildel();
+    hi = "+";
+  }
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "*" ) vildel();
+  if (event.key === "*") {
+    vildel();
+    hi = "*";
+  }
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key ===  "/" ) vildel();
+  if (event.key === "/") {
+    vildel();
+    hi = "/";
+  }
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "%") vildel();
+  if (event.key === "%") {
+    vildel();
+    hi = "%";
+  }
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "v") niittoo.innerHTML = number(niittoo.innerHTML) * "-1";
+  if (event.key === "v") {
+    niittoo.innerHTML = Number(niittoo.innerHTML) * "-1";
+  }
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "="){
+  if (event.key === "=") {
     if (hi === "-") {
-      niittoo.innerHTML = Number(niittoo.innerHTML) - Number(hadaglah);
+      niittoo.innerHTML = Number(hadaglah) - Number(niittoo.innerHTML);
     } else if (hi === "+") {
       niittoo.innerHTML = Number(niittoo.innerHTML) + Number(hadaglah);
     } else if (hi === "*") {
@@ -122,5 +139,5 @@ document.addEventListener("keydown", (event) => {
     } else if (niittoo.innerHTML.length > 10) {
       niittoo.style.fontSize = "40px";
     }
-  };
+  }
 });
