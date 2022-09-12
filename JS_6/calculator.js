@@ -1,13 +1,6 @@
 let niittoo = document.getElementById("calculator");
 const tooBichih = (number) => {
   niittoo.innerHTML += number;
-  if (niittoo.innerHTML.length > 16) {
-    niittoo.style.fontSize = "24px";
-  } else if (niittoo.innerHTML.length > 12) {
-    niittoo.style.fontSize = "32px";
-  } else if (niittoo.innerHTML.length > 10) {
-    niittoo.style.fontSize = "40px";
-  }
 };
 const AC = () => {
   niittoo.innerHTML = "";
@@ -17,13 +10,6 @@ const tseg = () => {
   if (niittoo.innerHTML[niittoo.innerHTML.length - 1] !== ".") {
     niittoo.innerHTML += ".";
   }
-  if (niittoo.innerHTML.length > 16) {
-    niittoo.style.fontSize = "24px";
-  } else if (niittoo.innerHTML.length > 12) {
-    niittoo.style.fontSize = "32px";
-  } else if (niittoo.innerHTML.length > 10) {
-    niittoo.style.fontSize = "40px";
-  }
 };
 let hadaglah;
 let hi;
@@ -31,23 +17,9 @@ const vildel = (operator) => {
   hi = operator;
   hadaglah = niittoo.innerHTML;
   AC();
-  if (niittoo.innerHTML.length > 16) {
-    niittoo.style.fontSize = "24px";
-  } else if (niittoo.innerHTML.length > 12) {
-    niittoo.style.fontSize = "32px";
-  } else if (niittoo.innerHTML.length > 10) {
-    niittoo.style.fontSize = "40px";
-  }
 };
 const nemehHasah = () => {
-  niittoo.innerHTML = Number(niittoo.innerHTML) * "-1";
-  if (niittoo.innerHTML.length > 16) {
-    niittoo.style.fontSize = "24px";
-  } else if (niittoo.innerHTML.length > 12) {
-    niittoo.style.fontSize = "32px";
-  } else if (niittoo.innerHTML.length > 10) {
-    niittoo.style.fontSize = "40px";
-  }
+  niittoo.innerHTML = ~~niittoo.innerHTML * "-1";
 };
 const tentsvv = () => {
   if (hi === "-") {
@@ -60,13 +32,6 @@ const tentsvv = () => {
     niittoo.innerHTML = Number(hadaglah) / Number(niittoo.innerHTML);
   } else if (hi === "%") {
     niittoo.innerHTML = (Number(hadaglah) / 100) * Number(niittoo.innerHTML);
-  }
-  if (niittoo.innerHTML.length > 16) {
-    niittoo.style.fontSize = "24px";
-  } else if (niittoo.innerHTML.length > 12) {
-    niittoo.style.fontSize = "32px";
-  } else if (niittoo.innerHTML.length > 10) {
-    niittoo.style.fontSize = "40px";
   }
 };
 document.addEventListener("keydown", (event) => {
