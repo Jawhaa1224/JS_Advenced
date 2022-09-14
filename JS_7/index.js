@@ -1,3 +1,4 @@
+const myFunction = () => { 
 let willIGetNewPhone = new Promise((resolve, reject) => {
   setTimeout(() => {
     let isMomHappy = Math.round(Math.random());
@@ -13,7 +14,7 @@ let willIGetNewPhone = new Promise((resolve, reject) => {
     }
   }, 1000);
 });
-let askMom = () => {
+const askMom = () => {
   return willIGetNewPhone
     .then((resolve) => {
       console.log(resolve);
@@ -23,3 +24,4 @@ let askMom = () => {
     });
 };
 console.log("asking:", askMom());
+}
