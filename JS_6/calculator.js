@@ -7,7 +7,10 @@ const AC = () => {
   niittoo.style.fontSize = "48px";
 };
 const tseg = () => {
-  if (niittoo.innerHTML[niittoo.innerHTML.length - 1] !== ".") {
+  if (!niittoo.innerHTML.includes(".")) {
+    if (niittoo.innerHTML == "") {
+      niittoo.innerHTML += "0";
+    }
     niittoo.innerHTML += ".";
   }
 };
@@ -19,7 +22,7 @@ const vildel = (operator) => {
   AC();
 };
 const nemehHasah = () => {
-  niittoo.innerHTML = ~~niittoo.innerHTML * "-1";
+  niittoo.innerHTML = Number(niittoo.innerHTML) * "-1";
 };
 const tentsvv = () => {
   if (hi === "-") {
@@ -99,7 +102,7 @@ document.addEventListener("keydown", (event) => {
     }
     if (niittoo.innerHTML.length > 16) {
       niittoo.style.fontSize = "24px";
-    } else if (niittoo.innerHTML.length > 12) {
+    } else if (niittoo.innerHTML.length > 9) {
       niittoo.style.fontSize = "32px";
     } else if (niittoo.innerHTML.length > 10) {
       niittoo.style.fontSize = "40px";

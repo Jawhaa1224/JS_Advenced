@@ -1,31 +1,30 @@
-const myFunction = () => {
-  const willILendMoney = new Promise((resolve, reject) => {
+let NumbeR;
+let whatnumber = new Promise((resolve, reject) => {
+  let number = parseInt(Math.random() * 3);
+  console.log(number);
+  if (isNaN(number)) {
+    resolve("err");
+  } else if (number / 2 !== 1) {
     setTimeout(() => {
-      let bankContact = Math.round(Math.random);
-      if (bankContact) {
-        let heleh = {
-          yuAvah: "mashin",
-          yuAvah: "bair",
-          toloh: "or",
-        };
-        resolve(heleh);
-      } else {
-        let medreh = {
-          emotional:"sad",
-          yahu:"uuy",
-        };
-        reject(medreh);
-      }
-    }, 1500);
-  });
-  const wait = () => {
-    return willILendMoney
-      .then((resolve) => {
-        console.log(resolve);
-      })
-      .catch((reject) => {
-        console.log(reject);
-      });
-  };
-  console.log("calling" + wait);
+      reject("odd");
+    }, 1000);
+  } else {
+    setTimeout(() => {
+      reject("even");
+    }, 2000);
+  }
+});
+const too = () => {
+  return whatnumber
+    .then((resolve) => {
+      console.log(resolve);
+    })
+    .catch((reject) => {
+      console.log(reject);
+    });
 };
+const text = async () => {
+  const value = await too();
+  console.log("Your number is" + value);
+};
+text();
