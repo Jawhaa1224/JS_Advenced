@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global weather</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-sky-500 flex justify-center items-center h-screen">
+    <div class="divide-y divide-gray-300 bg-white rounded-xl w-96 block" id="page1">
+      <div
+        class="text-sky-600 text-xl font-sans tracking-wide ml-9 h-10 mt-3 font-bold"
+      >
+        Weather
+      </div>
+      <div class="flex flex-col items-center">
+        <div
+          class="w-5/6 hidden justify-center items-center bg-sky-100 text-sky-400 mt-7 py-3.5 rounded"
+          id="err"
+        >
+          
+        </div>
+        <input
+          class="w-5/6 flex justify-center items-center h-12 pl-4 mt-8"
+          id="input"
+          placeholder="write location"
+        />
+        <div class="w-5/6 flex justify-center items-center py-3 text-gray-300">
+          _________________
+          <span class="mt-2.5 mx-2">or</span> _________________
+        </div>
+        <div
+          class="w-5/6 flex justify-center items-center bg-sky-400 mb-5 text-sky-50 mt-2 py-3.5 rounded capitalize"
+          id="getLocation"
+        >
+          get divise location
+        </div>
+      </div>
+    </div>
+    <div class="divide-y divide-gray-300 bg-white rounded-xl w-96 hidden" id="page2">
+      <div class="flex gap-5 ml-9">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 stroke-sky-400 mt-3 cursor-pointer"
+          id="back"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+          />
+        </svg>
+        <div
+          class="text-sky-600 text-xl font-sans tracking-wide h-10 mt-3 font-bold"
+        >
+          Weather site
+        </div>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <div class="py-6">
+          <img src="./sun.svg" class="w-40  hidden" alt="" id="sun"/>
+          <img src="./cloud.svg" class="w-40  hidden" alt="" id="cloud" />
+          <img src="./rain.svg" class="w-40 hidden" alt="" id="rain"/>
+          <img src="./thunder.png" class="w-40 hidden" alt="" id="thunder"/>
+          <img src="./mist.png" class="w-40 hidden" alt="" id="mist"/>
+          <img src="./snow.png" class="w-40 hidden" alt="" id="snow"/>
+        </div>
+        <div class="text-5xl pb-5" id="degree"><sup>o</sup>C</div>
+        <div class="text-lg text-gray-600 pb-2" id="weather"></div>
+        <div class="text-lg text-gray-600 pb-2" id="location"></div>
+      </div>
+      <div class="divide-x divide-gray-300 flex">
+        <div class="w-1/2 flex justify-center items-center py-4">
+            <img src="thermometer.png" class="h-10 text-blue-300" alt="">
+            <div>
+                <div id="feelsLike"><sup>o</sup>C</div>
+                <div>Feels like</div>
+            </div>
+        </div>
+        <div class="w-1/2 flex justify-center items-center py-4">
+            <img src="dropLine.jpeg" class="h-10" alt="">
+            <div>
+                <div id="humidity">%</div>
+                <div>Humidity</div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="weather.js"></script>
+</html>

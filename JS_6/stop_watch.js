@@ -12,7 +12,7 @@ const start = () => {
       }
       Tens.innerHTML = 00;
     }
-  }, 0.1);
+  }, 10);
 };
 const pause = () => {
   clearInterval(Interval);
