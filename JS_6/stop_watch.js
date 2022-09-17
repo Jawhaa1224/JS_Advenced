@@ -1,11 +1,8 @@
-const Start = document.getElementById("start");
-const Pause = document.getElementById("pause");
-const Reset = document.getElementById("reset");
 const Minuts = document.getElementById("minuts");
 const Seconds = document.getElementById("seconds");
 const Tens = document.getElementById("tens");
 const start = () => {
-  const zogsoh = setInterval(() => {
+  Interval = setInterval(() => {
     Tens.innerHTML = Number(Tens.innerHTML) + 1;
     if (Tens.innerHTML == 100) {
       Seconds.innerHTML = Number(Seconds.innerHTML) + 1;
@@ -15,9 +12,15 @@ const start = () => {
       }
       Tens.innerHTML = 00;
     }
-  }, 10);
+  }, 0.1);
 };
 const pause = () => {
-  clearInterval(zogsoh);
+  clearInterval(Interval);
+  document.getElementById("haha").style = "background-color:green";
 };
-const reset = () => {};
+const reset = () => {
+  clearInterval(Interval);
+  Minuts.innerHTML = "00";
+  Seconds.innerHTML = "00";
+  Tens.innerHTML = "00";
+};
