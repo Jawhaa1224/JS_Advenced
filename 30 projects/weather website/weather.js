@@ -15,6 +15,7 @@ const Humidity = document.getElementById("humidity");
 const page1 = document.getElementById("page1");
 const page2 = document.getElementById("page2");
 const Back = document.getElementById("back");
+let i = 1;
 let api;
 Input.addEventListener("keydown", (e) => {
   if (e.key == "Enter" && Input.value !== "") {
@@ -65,25 +66,25 @@ const weatherDetail = (info) => {
     page2.style.display = "block";
     const City = info.name;
     const country = info.sys.country;
-    const {description,id} = info.weather[0];
-    const {feels_like,humidity,temp} = info.main;
+    const { description, id } = info.weather[0];
+    const { feels_like, humidity, temp } = info.main;
     Location.innerHTML = `${City},${country}`;
     Weather.innerHTML = `${description}`;
     FeelsLike.innerHTML = Math.floor(feels_like) + FeelsLike.innerHTML;
     Humidity.innerHTML = humidity + Humidity.innerHTML;
     Degree.innerHTML = Math.floor(temp);
-    if(description.includes("cloud")) Cloud.classList.remove("hidden");
-    if(description.includes("sky")) Sun.classList.remove("hidden");
-    if(description.includes("mist")) Mist.classList.remove("hidden");
-    if(description.includes("thunder")) Thunder.classList.remove("hidden");
-    if(description.includes("rain")) Rain.classList.remove("hidden");
-    if(description.includes("snow")) Snow.classList.remove("hidden");
+    if (description.includes("cloud")) Cloud.classList.remove("hidden");
+    if (description.includes("sky")) Sun.classList.remove("hidden");
+    if (description.includes("mist")) Mist.classList.remove("hidden");
+    if (description.includes("thunder")) Thunder.classList.remove("hidden");
+    if (description.includes("rain")) Rain.classList.remove("hidden");
+    if (description.includes("snow")) Snow.classList.remove("hidden");
     console.log(info);
   }
 };
-Back.addEventListener("click",()=>{
-    page2.style.display = "none";
-    page1.style.display = "block";
-    Input.value = "";
-    Err.style.display = "none";
-})
+Back.addEventListener("click", () => {
+  page2.style.display = "none";
+  page1.style.display = "block";
+  Input.value = "";
+  Err.style.display = "none";
+});

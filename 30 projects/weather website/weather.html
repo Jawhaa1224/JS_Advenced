@@ -8,7 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-sky-500 flex justify-center items-center h-screen">
-    <div class="divide-y divide-gray-300 bg-white rounded-xl w-96 block" id="page1">
+    <div
+      class="divide-y divide-gray-300 bg-white rounded-xl w-96 block"
+      id="page1"
+    >
       <div
         class="text-sky-600 text-xl font-sans tracking-wide ml-9 h-10 mt-3 font-bold"
       >
@@ -18,9 +21,7 @@
         <div
           class="w-5/6 hidden justify-center items-center bg-sky-100 text-sky-400 mt-7 py-3.5 rounded"
           id="err"
-        >
-          
-        </div>
+        ></div>
         <input
           class="w-5/6 flex justify-center items-center h-12 pl-4 mt-8"
           id="input"
@@ -38,7 +39,10 @@
         </div>
       </div>
     </div>
-    <div class="divide-y divide-gray-300 bg-white rounded-xl w-96 hidden" id="page2">
+    <div
+      class="divide-y divide-gray-300 bg-white rounded-xl w-96 hidden"
+      id="page2"
+    >
       <div class="flex gap-5 ml-9">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -63,12 +67,12 @@
       </div>
       <div class="flex flex-col justify-center items-center">
         <div class="py-6">
-          <img src="./sun.svg" class="w-40  hidden" alt="" id="sun"/>
-          <img src="./cloud.svg" class="w-40  hidden" alt="" id="cloud" />
-          <img src="./rain.svg" class="w-40 hidden" alt="" id="rain"/>
-          <img src="./thunder.png" class="w-40 hidden" alt="" id="thunder"/>
-          <img src="./mist.png" class="w-40 hidden" alt="" id="mist"/>
-          <img src="./snow.png" class="w-40 hidden" alt="" id="snow"/>
+          <img src="./sun.svg" class="w-40 hidden" alt="" id="sun" />
+          <img src="./cloud.svg" class="w-40 hidden" alt="" id="cloud" />
+          <img src="./rain.svg" class="w-40 hidden" alt="" id="rain" />
+          <img src="./thunder.png" class="w-40 hidden" alt="" id="thunder" />
+          <img src="./mist.png" class="w-40 hidden" alt="" id="mist" />
+          <img src="./snow.png" class="w-40 hidden" alt="" id="snow" />
         </div>
         <div class="text-5xl pb-5" id="degree"><sup>o</sup>C</div>
         <div class="text-lg text-gray-600 pb-2" id="weather"></div>
@@ -76,18 +80,18 @@
       </div>
       <div class="divide-x divide-gray-300 flex">
         <div class="w-1/2 flex justify-center items-center py-4">
-            <img src="thermometer.png" class="h-10 text-blue-300" alt="">
-            <div>
-                <div id="feelsLike"><sup>o</sup>C</div>
-                <div>Feels like</div>
-            </div>
+          <img src="thermometer.png" class="h-10 text-blue-300" alt="" />
+          <div>
+            <div id="feelsLike"><sup>o</sup>C</div>
+            <div>Feels like</div>
+          </div>
         </div>
         <div class="w-1/2 flex justify-center items-center py-4">
-            <img src="dropLine.jpeg" class="h-10" alt="">
-            <div>
-                <div id="humidity">%</div>
-                <div>Humidity</div>
-            </div>
+          <img src="dropLine.jpeg" class="h-10" alt="" />
+          <div>
+            <div id="humidity">%</div>
+            <div>Humidity</div>
+          </div>
         </div>
       </div>
     </div>
