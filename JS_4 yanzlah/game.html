@@ -20,13 +20,6 @@
       >
         winner
       </div>
-      <button
-        class="py-10 px-16 bg-teal-500 uppercase rounded-xl h-16 font-semibold text-2xl mb-32"
-        onclick="ulaan()"
-        id="ulaan"
-      >
-        улаан
-      </button>
     </div>
     <div
       class="bg-blue-600 h-screen flex justify-center items-end"
@@ -40,43 +33,7 @@
       >
         winner
       </div>
-      <button
-        class="py-10 px-16 bg-teal-500 uppercase rounded-xl h-16 font-semibold text-2xl mb-32"
-        onclick="tsenher()"
-        id="tsenher"
-      >
-        цэнхэр
-      </button>
     </div>
   </body>
-  <script>
-    const ulaan = () => {
-      document.getElementById("Ulaan").style.width =
-        Number(document.getElementById("Ulaan").style.width.split("%")[0]) +
-        5 +
-        "%";
-      document.getElementById("Tsenher").style.width =
-        Number(document.getElementById("Tsenher").style.width.split("%")[0]) -
-        5 +
-        "%";
-      if (document.getElementById("Ulaan").style.width > "89%") {
-        document.getElementById("redwinner").style =
-          "display:flex; flex-direction:column;align-items:center;justify-between";
-      }
-    };
-    const tsenher = () => {
-      document.getElementById("Ulaan").style.width =
-        Number(document.getElementById("Ulaan").style.width.split("%")[0]) -
-        5 +
-        "%";
-      document.getElementById("Tsenher").style.width =
-        Number(document.getElementById("Tsenher").style.width.split("%")[0]) +
-        5 +
-        "%";
-      if (document.getElementById("Tsenher").style.width > "89%") {
-        document.getElementById("bluewinner").style =
-          "display:flex; flex-direction:column;align-items:center;justify-between";
-      }
-    };
-  </script>
+  <script></script>
 </html>
