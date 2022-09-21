@@ -18,8 +18,9 @@
           id="input"
           class="text-5xl text-gray-800 outline-none"
           style="width: 330px"
+          placeholder="write your city"
         />
-        <div class="location" id="location">
+        <div class="cursor-pointer" id="location">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -42,10 +43,11 @@
           </svg>
         </div>
       </div>
-      <div class="ml-8" id="image" style="width: 360px; height: 350px"></div>
+      <div class="ml-8 style=" style="width: 360px; height: 350px">
+        <img src="" alt="" id="image" class="hidden" />
+      </div>
       <div class="pl-8 p-10 flex flex-col gap-16 justify-end">
-        <div class="text-9xl font-extrabold text-gray-800" id="degree">
-          23
+        <div class="text-9xl font-extrabold text-gray-800 h-36" id="degree">
           <sup id="sup"></sup>
         </div>
         <div class="flex">
@@ -53,7 +55,7 @@
           <div id="feelsLike" class="text-sky-500 w-1/2 pl-9">feels-like:</div>
         </div>
       </div>
-      <div class="condition pl-8 text-xl" id="condition">sunny</div>
+      <div class="condition pl-8 text-xl" id="condition"></div>
       <div class="icons flex justify-between p-8">
         <svg
           xmlns="http://www.w3.org/2000/svg"
